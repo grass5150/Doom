@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOOM ECHO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="overlay" class="overlay">
+    <div id="menu" class="screen active">
+      <h1 class="title">DOOM ECHO</h1>
+      <p class="subtitle">A RAYCASTING SHOOTER</p>
+      <div class="controls-info">
+        <p>WASD - Move &nbsp; Mouse - Look &nbsp; LMB/Space - Fire</p>
+        <p>Tab - Minimap &nbsp; Esc - Pause &nbsp; R - Restart (when dead)</p>
+      </div>
+      <button id="startBtn" class="btn">CLICK TO PLAY</button>
+    </div>
+    <div id="pauseScreen" class="screen">
+      <h1>PAUSED</h1>
+      <button id="resumeBtn" class="btn">RESUME</button>
+      <button id="menuBtn" class="btn">MAIN MENU</button>
+    </div>
+    <div id="deathScreen" class="screen">
+      <h1 class="red">YOU DIED</h1>
+      <p id="deathScore"></p>
+      <button id="restartBtn" class="btn">TRY AGAIN</button>
+      <button id="deathMenuBtn" class="btn">MAIN MENU</button>
+    </div>
+    <div id="winScreen" class="screen">
+      <h1 class="gold">VICTORY!</h1>
+      <p id="winScore"></p>
+      <button id="winMenuBtn" class="btn">MAIN MENU</button>
+    </div>
+    <div id="levelTransition" class="screen">
+      <h1 id="levelTitle">LEVEL COMPLETE</h1>
+      <p id="levelSubtitle"></p>
+    </div>
+  </div>
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Load in strict dependency order (no ES modules = works from file://) -->
+  <script src="src/assets/Constants.js"></script>
+  <script src="src/systems/EventBus.js"></script>
+  <script src="src/assets/textures.js"></script>
+  <script src="src/assets/sprites.js"></script>
+  <script src="src/engine/Camera.js"></script>
+  <script src="src/world/Map.js"></script>
+  <script src="src/engine/Raycaster.js"></script>
+  <script src="src/engine/FloorCeiling.js"></script>
+  <script src="src/engine/SpriteRenderer.js"></script>
+  <script src="src/engine/HUD.js"></script>
+  <script src="src/engine/Minimap.js"></script>
+  <script src="src/engine/Renderer.js"></script>
+  <script src="src/entities/Entity.js"></script>
+  <script src="src/entities/enemies/EnemyBase.js"></script>
+  <script src="src/entities/enemies/Zombie.js"></script>
+  <script src="src/entities/enemies/Soldier.js"></script>
+  <script src="src/entities/enemies/Demon.js"></script>
+  <script src="src/entities/enemies/Boss.js"></script>
+  <script src="src/entities/Player.js"></script>
+  <script src="src/systems/InputManager.js"></script>
+  <script src="src/systems/CollisionSystem.js"></script>
+  <script src="src/systems/AISystem.js"></script>
+  <script src="src/systems/CombatSystem.js"></script>
+  <script src="src/systems/AudioSystem.js"></script>
+  <script src="src/systems/GameLoop.js"></script>
+  <script src="src/world/LevelLoader.js"></script>
+  <script src="src/world/levels/level1.js"></script>
+  <script src="src/world/levels/level2.js"></script>
+  <script src="src/world/levels/level3.js"></script>
+  <script src="src/world/levels/levelIndex.js"></script>
+  <script src="src/main.js"></script>
+</body>
+</html>
