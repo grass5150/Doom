@@ -1,11 +1,11 @@
 // All game constants - no magic numbers anywhere else
 const C = {
-  SCREEN_W: 640,
-  SCREEN_H: 400,
+  SCREEN_W: 1280,
+  SCREEN_H: 800,
   TEX_SIZE: 64,     // Texture dimensions (power of 2)
   TEX_MASK: 63,     // TEX_SIZE - 1 for fast mod
   FOV: Math.PI / 3, // 60 degree field of view
-  HALF_H: 200,      // SCREEN_H / 2
+  HALF_H: 400,      // SCREEN_H / 2
   MOVE_SPEED: 3.2,
   ROT_SPEED: 0.0025, // radians per pixel of mouse movement
   PLAYER_RADIUS: 0.3,
