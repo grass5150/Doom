@@ -84,6 +84,6 @@ src/
 ## Technical Notes
 
 - Scripts loaded with plain `<script>` tags and global namespacing so the game works from `file://` without a local server
-- Internal resolution is 640×400, CSS-scaled to fill the window with `image-rendering: pixelated`
+- Internal resolution is 1280×800, CSS-scaled to fill the window
 - Enemy LOS checks are staggered by distance to keep AI cheap at 60 fps
 - Bullets are sub-stepped each frame to prevent tunneling through thin walls
